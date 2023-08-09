@@ -1,8 +1,9 @@
-h1 {
-    color: blue;
+body {
+  background: lightcyan;
 }
 
-h2 {
-    color: green;
-    font: 12px;
+h1 {
+  color: blue;
 }
+
+/*# sourceMappingURL=style.css.map */
