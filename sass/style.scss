@@ -31,10 +31,16 @@ body {
     flex-direction: column;
 
     &__title {
+        display: none;
         font-family: 'Shrikhand', cursive;
-        font-weight: 400;
         font-size: 30px;
-        height: 63px;
+        font-weight: 400;
+    }
+
+    &__logo {
+        width: 197px;
+        height: 36px;
+        padding: 14px 89px 13px 89px; 
     }
 
     &__location {
