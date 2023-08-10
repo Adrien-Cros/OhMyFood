@@ -1,9 +1,6 @@
-body {
-  background: lightcyan;
-}
-
-h1 {
-  color: blue;
+/****** General ***********/
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

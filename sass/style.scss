@@ -1,7 +1,14 @@
-body {
-    background: lightcyan;
+
+
+/****** General ***********/
+
+* {
+    font-family: 'Roboto', sans-serif;
+    $font-family: 'Shrikhand', cursive;
 }
 
-h1 {
-    color: blue;
+:root {
+    $primary-color: #9356DC;
+    $secondary-color: #FF79DA;
+    $tertiary-color: #99E2D0;
 }
