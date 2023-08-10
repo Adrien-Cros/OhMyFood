@@ -2,13 +2,52 @@
 
 /****** General ***********/
 
+/****** Variables ***********/
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-color: #F6F6F6;
+$background-color-location: #EAEAEA;
+
 * {
-    font-family: 'Shrikhand', cursive;
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    line-height: normal;
 }
 
-:root {
-    $primary-color: #9356DC;
-    $secondary-color: #FF79DA;
-    $tertiary-color: #99E2D0;
+body {
+    margin: 0;
+}
+
+/****** Header ***********/
+
+.header-center-flex {
+    align-items: center;
+    display: flex;
+}
+
+.header {
+    flex-direction: column;
+
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        font-size: 30px;
+        height: 63px;
+    }
+
+    &__location {
+        background: $background-color-location;
+        align-self: stretch;
+        justify-content: center;
+        gap: 17px;
+        color: #353535;
+        height: 50px;
+
+        &__city {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
 }

@@ -1,7 +1,41 @@
 /****** General ***********/
+/****** Variables ***********/
 * {
-  font-family: "Shrikhand", cursive;
   font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+body {
+  margin: 0;
+}
+
+/****** Header ***********/
+.header-center-flex {
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  flex-direction: column;
+}
+.header__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  height: 63px;
+}
+.header__location {
+  background: #EAEAEA;
+  align-self: stretch;
+  justify-content: center;
+  gap: 17px;
+  color: #353535;
+  height: 50px;
+}
+.header__location__city {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
