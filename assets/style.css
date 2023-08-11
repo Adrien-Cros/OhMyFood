@@ -128,7 +128,7 @@ body {
   left: -12px;
   transform: translateY(-50%);
 }
-.functioning__list__button p {
+.functioning__list__button__name {
   width: 211px;
   height: 15.67px;
 }
