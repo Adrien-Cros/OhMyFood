@@ -3,9 +3,14 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $background-color: #F6F6F6;
-$background-color-location: #EAEAEA;
+$background-color-explore: #EAEAEA;
 
 $button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+
+/****** Mixin ***********/
+@mixin box-shadow ($blur-radius, $color-alpha) {
+    box-shadow: 0px 4px $blur-radius 0px rgba(0, 0, 0, $color-alpha);
+}
 
 /****** General ***********/
 * {
@@ -47,7 +52,7 @@ body {
     }
 
     &__location {
-        background: $background-color-location;
+        background: $background-color-explore;
         align-self: stretch;
         justify-content: center;
         gap: 17px;
@@ -84,16 +89,95 @@ body {
     }
 
     &__button {
+        @include box-shadow(10px, 0.25);
         justify-content: center;
         width: 218px;
         height: 50px;
         border-radius: 25px;
         border: none;
         background: $button-gradient;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
         color: white;
         font-size: 16px;
         font-weight: 500;
         margin: 27px 0 57px 0;
     }
+
+    &__button:hover {
+        @include box-shadow(15px, 0.35);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+    }
 }
+
+/****** Fonctionnement ***********/
+
+.functioning {
+
+    &__title {
+        width: 275px;
+        height: 31px;
+        margin: 48px 0 26px 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24.92px;
+
+        &__button {
+            @include box-shadow(15px, 0.15);
+            justify-content: center;
+            width: 322.486px;
+            height: 72.379px;
+            border: none;
+            border-radius: 20px;
+            background: $background-color;
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 38px;
+            position: relative;
+
+            &__circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 24px;
+                color: white;
+                font-size: 14.182px;
+                font-weight: 500;
+                background: #9356DC;
+                position: absolute;
+                top: 50%;
+                left: -12px;
+                transform: translateY(-50%);
+            }
+
+            p {
+                width: 211px;
+                height: 15.67px;
+            }
+
+            .fa-mobile-screen {
+                width: 13.019px;
+                height: 19.903px; 
+                color: #7E7E7E;
+            }
+
+            .fa-list-ul {
+                width: 16px;
+                height: 15.922px; 
+                color: #7E7E7E;
+            }
+
+            .fa-store {
+                width: 18px;
+                height: 17.913px; 
+                color: #9356DC;
+            }
+        }
+    }
+}
+
+/****** Restaurants ***********/
