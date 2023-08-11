@@ -5,11 +5,21 @@ $tertiary-color: #99E2D0;
 $background-color: #F6F6F6;
 $background-color-explore: #EAEAEA;
 
+$grey: #353535;
+
 $button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 
 /****** Mixin ***********/
 @mixin box-shadow ($blur-radius, $color-alpha) {
     box-shadow: 0px 4px $blur-radius 0px rgba(0, 0, 0, $color-alpha);
+}
+
+@mixin font-logo($font-size) {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: $font-size;
+    font-style: normal;
+    line-height: normal
 }
 
 /****** General ***********/
@@ -34,15 +44,17 @@ body {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 /****** Header ***********/
 .header {
     flex-direction: column;
 
     &__title {
         display: none;
-        font-family: 'Shrikhand', cursive;
-        font-size: 30px;
-        font-weight: 400;
+        @include font-logo(30px);
     }
 
     &__logo {
@@ -56,7 +68,7 @@ body {
         align-self: stretch;
         justify-content: center;
         gap: 17px;
-        color: #353535;
+        color: $grey;
         height: 50px;
 
         &__city {
@@ -82,7 +94,7 @@ body {
     &__subtitle {
         font-size: 18px;
         font-weight: 300;
-        color: #353535;
+        color: $grey;
         margin: 0;
         width: 315px;
         height: 46px;
@@ -273,7 +285,6 @@ body {
 
     a {
         display: flex;
-        text-decoration: none;
         color: black;
     }
 
@@ -281,5 +292,42 @@ body {
         display: flex;
         flex-direction: column;
         gap: 18px;
+    }
+}
+
+/****** Footer ***********/
+.footer {
+    background: $grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 25px;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-self: self-start;
+        gap: 7px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            color: white;
+        }
+
+        .fa-solid {
+            width: 12px;
+            height: 13px;
+        }
+
+        li i {
+            margin-right: 15px;
+        }
+    }
+
+    &__title {
+        @include font-logo(18px);
     }
 }

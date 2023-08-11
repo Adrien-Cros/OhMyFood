@@ -22,6 +22,10 @@ body {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 /****** Header ***********/
 .header {
   flex-direction: column;
@@ -29,8 +33,10 @@ body {
 .header__title {
   display: none;
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
   font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+  line-height: normal;
 }
 .header__logo {
   width: 197px;
@@ -233,13 +239,48 @@ body {
 }
 .restaurants a {
   display: flex;
-  text-decoration: none;
   color: black;
 }
 .restaurants__cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+/****** Footer ***********/
+.footer {
+  background: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  align-self: self-start;
+  gap: 7px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__link a {
+  color: white;
+}
+.footer__link .fa-solid {
+  width: 12px;
+  height: 13px;
+}
+.footer__link li i {
+  margin-right: 15px;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
