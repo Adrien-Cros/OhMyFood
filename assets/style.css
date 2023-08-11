@@ -1,5 +1,5 @@
-/****** General ***********/
 /****** Variables ***********/
+/****** General ***********/
 * {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -10,12 +10,18 @@ body {
   margin: 0;
 }
 
-/****** Header ***********/
-.header-center-flex {
-  align-items: center;
-  display: flex;
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+/****** Header ***********/
 .header {
   flex-direction: column;
 }
@@ -41,6 +47,39 @@ body {
 .header__location__city {
   font-size: 16px;
   font-weight: 500;
+}
+
+/****** Explore ***********/
+.explore {
+  flex-direction: column;
+  text-align: center;
+  background: #F6F6F6;
+}
+.explore__title {
+  margin-top: 39px;
+  width: 275px;
+  height: 68px;
+}
+.explore__subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+  margin: 0;
+  width: 315px;
+  height: 46px;
+}
+.explore__button {
+  justify-content: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 27px 0 57px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
