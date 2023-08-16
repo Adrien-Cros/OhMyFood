@@ -181,7 +181,7 @@ a {
     margin-right: 17.5px;
     position: relative;
 
-    img {
+    & > img {
         height: 67%;
         display: flex;
         border-radius: 15px 15px 0px 0px; 
@@ -212,13 +212,13 @@ a {
         margin-left: 13px;
         position: relative;
 
-        .fa-heart {
+        &__icon {
             position: absolute;
-            justify-content: center;
             right: 5%;
-            top: 30%;
+            top: 37%;
             width: 22px;
             height: 21px;
+            font-size: 22px;
         }
 
         &__title {

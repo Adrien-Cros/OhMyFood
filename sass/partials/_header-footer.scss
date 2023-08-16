@@ -18,6 +18,8 @@ $grey: #353535;
 /****** Header ***********/
 .header {
 
+    justify-content: center;
+
     &__title {
         display: none;
         @include font-logo(30px);
