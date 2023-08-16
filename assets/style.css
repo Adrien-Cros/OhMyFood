@@ -1,5 +1,57 @@
 /****** Variables ***********/
 /****** Mixin ***********/
+/****** Header ***********/
+.header__title {
+  display: none;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+  line-height: normal;
+}
+.header__logo {
+  width: 197px;
+  height: 36px;
+  padding: 14px 89px 13px 89px;
+}
+
+/****** Footer ***********/
+.footer {
+  background: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  align-self: self-start;
+  gap: 7px;
+  list-style-type: none;
+  padding: 0;
+}
+.footer__link a {
+  color: white;
+}
+.footer__link .fa-solid {
+  width: 12px;
+  height: 13px;
+}
+.footer__link li i {
+  margin-right: 15px;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+/****** Variables ***********/
+/****** Mixin ***********/
 /****** General ***********/
 * {
   font-family: "Roboto", sans-serif;
@@ -20,24 +72,6 @@
 
 a {
   text-decoration: none;
-}
-
-/****** Header ***********/
-.header {
-  flex-direction: column;
-}
-.header__title {
-  display: none;
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  font-size: 30px;
-  font-style: normal;
-  line-height: normal;
-}
-.header__logo {
-  width: 197px;
-  height: 36px;
-  padding: 14px 89px 13px 89px;
 }
 
 /****** Location ***********/
@@ -116,7 +150,6 @@ a {
   background: #F6F6F6;
   font-size: 16px;
   font-weight: 500;
-  padding-right: 38px;
   position: relative;
 }
 .functioning__list__button__circle {
@@ -237,41 +270,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 18px;
-}
-
-/****** Footer ***********/
-.footer {
-  background: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 22px 25px;
-}
-.footer__link {
-  display: flex;
-  flex-direction: column;
-  align-self: self-start;
-  gap: 7px;
-  list-style-type: none;
-  padding: 0;
-}
-.footer__link a {
-  color: white;
-}
-.footer__link .fa-solid {
-  width: 12px;
-  height: 13px;
-}
-.footer__link li i {
-  margin-right: 15px;
-}
-.footer__title {
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
