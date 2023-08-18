@@ -130,23 +130,42 @@ a {
 
 /****** Fonctionnement ***********/
 .functioning {
-  margin-bottom: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 20px 68px 32.51px;
+  gap: 26px;
+}
+@media (min-width: 1024px) {
+  .functioning {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
 }
 .functioning__title {
   width: 275px;
   height: 31px;
-  margin: 48px 0 26px 20px;
+}
+@media (min-width: 1024px) {
+  .functioning__title {
+    margin-left: 0;
+  }
 }
 .functioning__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24.92px;
+}
+@media (min-width: 1024px) {
+  .functioning__list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 36.51px;
+  }
 }
 .functioning__list__button {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   justify-content: center;
-  width: 322.486px;
+  width: 100%;
   height: 72.379px;
   border: none;
   border-radius: 20px;
@@ -154,6 +173,11 @@ a {
   font-size: 16px;
   font-weight: 500;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .functioning__list__button {
+    padding-left: 32px;
+  }
 }
 .functioning__list__button__circle {
   display: flex;
@@ -174,6 +198,9 @@ a {
 .functioning__list__button__name {
   width: 211px;
   height: 15.67px;
+}
+.functioning__list__button .fa-solid {
+  line-height: normal;
 }
 .functioning__list__button .fa-mobile-screen {
   width: 13.019px;
@@ -201,8 +228,6 @@ a {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-left: 17.5px;
-  margin-right: 17.5px;
   position: relative;
 }
 .cards > img {
@@ -257,22 +282,40 @@ a {
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding-top: 54px;
-  padding-bottom: 66px;
+  padding: 54px 18px 66px 17px;
+  gap: 20px;
   background: #F6F6F6;
 }
-.restaurants__title {
-  margin-left: 20px;
-  margin-bottom: 20px;
+@media (min-width: 1024px) {
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+.restaurants__cards {
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    gap: 50px;
+  }
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurants__container {
+    flex-direction: row;
+    gap: 100px;
+  }
 }
 .restaurants a {
   display: flex;
   color: black;
-}
-.restaurants__cards {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
