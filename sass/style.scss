@@ -9,7 +9,7 @@ $tertiary-color: #99E2D0;
 $background-color: #F6F6F6;
 $background-color-explore: #EAEAEA;
 
-$button-gradient: linear-gradient(175deg, $primary-color 0%, $secondary-color 100%);
+$color-gradient: linear-gradient(175deg, $primary-color 0%, $secondary-color 100%);
 
 //same variables as _header-footer.scss files
 $desktop-breakpoint: 1024px;
@@ -60,6 +60,10 @@ a {
     height: 50px;
     box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, .1);
 
+    @media (min-width: $desktop-breakpoint) {
+        box-shadow: none;
+    }
+
     &__city {
         font-weight: 500;
     }
@@ -92,7 +96,7 @@ a {
         height: 50px;
         border-radius: 25px;
         border: none;
-        background: $button-gradient;
+        background: $color-gradient;
         color: white;
         font-weight: 500;
         margin: 27px 0 57px 0;
@@ -100,7 +104,7 @@ a {
 
         &:hover {
             @include box-shadow(15px, 0.35);
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, $primary-color 0%, $secondary-color 100%);
         }
     }
 }
@@ -201,7 +205,7 @@ a {
 }
 
 /****** Restaurants ***********/
-/*Cards*/
+/*Cards General*/
 .cards {
     display: flex;
     flex-direction: column;
@@ -266,7 +270,7 @@ a {
     }
 }
 
-/*******/
+/*Restaurant section*/
 .restaurants {
     display: flex;
     flex-direction: column;

@@ -126,6 +126,11 @@ a {
   height: 50px;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
+@media (min-width: 1024px) {
+  .location {
+    box-shadow: none;
+  }
+}
 .location__city {
   font-weight: 500;
 }
@@ -256,7 +261,7 @@ a {
 }
 
 /****** Restaurants ***********/
-/*Cards*/
+/*Cards General*/
 .cards {
   display: flex;
   flex-direction: column;
@@ -315,7 +320,7 @@ a {
   font-weight: 300;
 }
 
-/*******/
+/*Restaurant section*/
 .restaurants {
   display: flex;
   flex-direction: column;
