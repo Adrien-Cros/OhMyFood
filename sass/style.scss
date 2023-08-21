@@ -9,11 +9,11 @@ $tertiary-color: #99E2D0;
 $background-color: #F6F6F6;
 $background-color-explore: #EAEAEA;
 
-$grey: #353535;
-
 $button-gradient: linear-gradient(175deg, $primary-color 0%, $secondary-color 100%);
 
+//same variables as _header-footer.scss files
 $desktop-breakpoint: 1024px;
+$grey: #353535;
 
 /****** Mixin ***********/
 @mixin box-shadow ($blur-radius, $color-alpha) {
@@ -25,7 +25,17 @@ $desktop-breakpoint: 1024px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     line-height: normal;
+    font-size: 16px;
     margin: 0;
+}
+
+body {
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .section-title {
@@ -51,7 +61,6 @@ a {
     box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, .1);
 
     &__city {
-        font-size: 16px;
         font-weight: 500;
     }
 }
@@ -85,7 +94,6 @@ a {
         border: none;
         background: $button-gradient;
         color: white;
-        font-size: 16px;
         font-weight: 500;
         margin: 27px 0 57px 0;
         transition: all 300ms ease-out;
@@ -138,7 +146,6 @@ a {
             border: none;
             border-radius: 20px;
             background: $background-color;
-            font-size: 16px;
             font-weight: 500;
             position: relative;
 
