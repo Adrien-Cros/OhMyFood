@@ -1,5 +1,5 @@
 /****** Variables ***********/
-/****** Mixin ***********/
+/****** Mixin **************/
 /****** Header ***********/
 .header {
   justify-content: center;
@@ -96,6 +96,7 @@
 
 body {
   max-width: 1440px;
+  min-width: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -271,6 +272,11 @@ a {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+@media (min-width: 1024px) {
+  .cards {
+    box-shadow: none;
+  }
 }
 .cards > img {
   height: 67%;
