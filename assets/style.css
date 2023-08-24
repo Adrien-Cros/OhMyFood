@@ -156,13 +156,15 @@ a {
 }
 .explore__button {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
   justify-content: center;
   width: 218px;
   height: 50px;
   border-radius: 25px;
   border: none;
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 500;
   margin: 27px 0 57px 0;
   transition: all 300ms ease-out;
@@ -208,6 +210,8 @@ a {
 }
 .functioning__list__button {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 72.379px;
@@ -314,6 +318,13 @@ a {
   width: 22px;
   height: 21px;
   font-size: 22px;
+  transition: all 250ms ease;
+}
+.cards__content__icon:hover {
+  font-weight: bold;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .cards__content__title {
   display: flex;

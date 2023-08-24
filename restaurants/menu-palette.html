@@ -16,21 +16,28 @@
 
 <body>
     <!--Header-->
-    <header class="header flex-center">
+    <header class="header">
+        <a href="../index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
         <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="logo Oh My Food">
-        <h1 class="header__title">ohmyfood</h1> <!--Nom caché mais en h1 pour le référencement-->
+        <h1 class="header__title">ohmyfood</h1>
     </header> 
 
     <!--Image du restaurants-->
-    <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du restaurant La palette du goût">
+    <img class="img-restaurant" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du restaurant La palette du goût">
 
     <!--Section menu-->
     <section class="menu">
         <!--Nom du restaurants-->
-        <h2 class="menu_restaurants-name">La palette du goût</h1>
+        <h2 class="menu__restaurants-name">La palette du goût
+            <i class="fa-regular fa-heart"></i>
+        </h2>
         <!--Entrées-->
-        <article class="menu__starter flex-column">
-            <h3 class="menu__starter__title">Entrées</h3>
+        <article class="menu__starter">
+            <div class="menu__starter__title">ENTRÉES
+                <div class="menu__starter__title border-title"></div>
+            </div>
             <a href="#">
                 <article class="cards">
                     <div class="cards__content">
@@ -61,8 +68,10 @@
         </article>
 
         <!--Plats-->
-        <article class="menu__main-course flex-column">
-            <h3 class="menu__main-course__title">Plats</h3>
+        <article class="menu__main-course">
+            <div class="menu__main-course__title">PLATS
+                <div class="menu__starter__title border-title"></div>
+            </div>
             <a href="#">
                 <article class="cards">
                     <div class="cards__content">
@@ -93,8 +102,10 @@
         </article>
 
         <!--Desserts-->
-        <article class="menu__dessert flex-column">
-            <h3 class="menu__dessert__title">Desserts</h3>
+        <article class="menu__dessert">
+            <div class="menu__dessert__title">DESSERTS
+                <div class="menu__starter__title border-title"></div>
+            </div>
             <a href="#">
                 <article class="cards">
                     <div class="cards__content">
@@ -123,20 +134,18 @@
                 </article>
             </a>
         </article>
-
-    <!--Bouton pour commander le menu-->
-    <div class="btn__command">BOUTON</div>
-
+        <!--Bouton pour commander le menu-->
+        <a href="#" class="command-btn">Commander</a>
     </section>
 
     <!--Footer-->
     <footer class="footer">
         <div class="footer__title">ohmyfood</div>
             <ul class="footer__link">
-                <li><a class="footer__link--wider flex-center" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a class="footer__link--wider flex-center" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-                <li><a class="footer__link--normal flex-center" href="#">Mentions légales</a></li>
-                <li><a class="footer__link--normal flex-center" href="#">Contact</a></li>
+                <li><a class="footer__link--wider" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a class="footer__link--wider" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a class="footer__link--normal" href="#">Mentions légales</a></li>
+                <li><a class="footer__link--normal" href="#">Contact</a></li>
             </ul>
     </footer>
 </body>
