@@ -51,6 +51,38 @@ $grey: #353535;
     }
 }
 
+@keyframes select-btn-reverse {
+    100% {
+        transform: translateX(1) scaleX(0);
+        width: 0;
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateX(0.75) scaleX(0.25);
+        width: 18px;
+
+    }
+    50% {
+        transform: translateX(0.625) scaleX(0.37);
+        width: 38px;
+
+    }
+    33% {
+        transform: translateX(0.5) scaleX(0.5);
+        width: 56px;
+
+    }
+    25% {
+        transform: translateX(0.25) scaleX(0.75);
+        width: 74px;
+    }
+    0% {
+        transform: translateX(0) scaleX(1);
+        width: 90px;
+        opacity: 1;
+    }
+}
+
 /****** General ***********/
 * {
     font-family: 'Roboto', sans-serif;
@@ -254,9 +286,6 @@ article a {
         
             &:hover {
                 .select__button {
-                  /*  width: 64px;
-                    opacity: 1;
-                    transform: translateX(0);*/
                     animation: select-btn 300ms both ease-out;
                 }
                 .fa-check {
@@ -265,6 +294,12 @@ article a {
 
                 .cards__menu {
                     width: 228.3px;
+                }
+            }
+
+            &:not(:hover) {
+                .select__button {
+                    animation: select-btn-reverse 300ms both ease-out;
                 }
             }
         }
