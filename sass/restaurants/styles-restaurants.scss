@@ -18,6 +18,38 @@ $grey: #353535;
     box-shadow: 0px 4px $blur-radius 0px rgba(0, 0, 0, $color-alpha);
 }
 
+/****** Keyframe ***********/
+@keyframes select-btn {
+    0% {
+        transform: translateX(1) scaleX(0);
+        width: 0;
+        opacity: 0.8;
+    }
+    25% {
+        transform: translateX(0.75) scaleX(0.25);
+        width: 18px;
+
+    }
+    33% {
+        transform: translateX(0.625) scaleX(0.37);
+        width: 38px;
+
+    }
+    50% {
+        transform: translateX(0.5) scaleX(0.5);
+        width: 56px;
+
+    }
+    75% {
+        transform: translateX(0.25) scaleX(0.75);
+        width: 74px;
+    }
+    100% {
+        transform: translateX(0) scaleX(1);
+        width: 90px;
+        opacity: 1;
+    }
+}
 
 /****** General ***********/
 * {
@@ -105,18 +137,21 @@ article a {
 
 /*******Cards general **********/
 
+
 .cards {
     display: flex;
-    justify-content: space-between;
-    gap: 5px;
     background-color: white;
     border-radius: 15px;
     @include box-shadow(15px, 0.1);
     width: 100%;
 
-    .column {
+    &__menu {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__content {
@@ -126,18 +161,24 @@ article a {
         margin: 15px;
         height: 42px;
         width: 100%;
-        overflow: hidden;
 
         &__title {
             font-size: 18px;
             font-weight: 500;
             height: 21px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
         }
 
         &__subtitle {
             font-size: 15px;
             font-weight: 300;
             height: 19px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
 
@@ -159,23 +200,6 @@ article a {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
-    a {
-        width: 349px;
-        height: 69px;
-
-        .select__button {
-            background: $tertiary-color;
-            border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
-            width: 69px;
-            display: none;
-        }
-
-        &:hover + {
-            
-        }
-    }
-
     &__restaurants-name {
         position: relative;
         
@@ -184,7 +208,6 @@ article a {
             position: absolute;
             right: 7%;
             top: 15%;
-            transition: all 250ms ease;
 
             &:hover {
                 font-weight: bold;
@@ -201,6 +224,50 @@ article a {
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        a {
+            width: 349px;
+            height: 69px;
+        
+            .select__button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $tertiary-color;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                width: 0;
+                opacity: 0;
+                transform: translateX(1) scaleX(1);
+               // transition: transform 200ms ease-out, width 200ms ease-out;
+        
+                .fa-check {
+                    opacity: 0;
+                    display: flex;
+                    background: white;
+                    color: $tertiary-color;
+                    font-size: 14px;
+                    border-radius: 12px;
+                    padding: 4px;
+                }
+            }
+        
+            &:hover {
+                .select__button {
+                  /*  width: 64px;
+                    opacity: 1;
+                    transform: translateX(0);*/
+                    animation: select-btn 300ms both ease-out;
+                }
+                .fa-check {
+                    opacity: 1;
+                }
+
+                .cards__menu {
+                    width: 228.3px;
+                }
+            }
+        }
     }
 
     .border-title {
