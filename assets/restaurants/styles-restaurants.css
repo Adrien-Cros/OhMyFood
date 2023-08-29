@@ -241,11 +241,11 @@ a {
   background: #99E2D0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  opacity: 0;
   margin-left: -70px;
-  width: 70px;
+  width: 0;
   height: 69px;
   transform: translate(70px);
+  transition: width 500ms ease-out, transform 500ms ease-out;
 }
 .confirm__btn .fa-check {
   display: flex;
@@ -254,6 +254,9 @@ a {
   font-size: 14px;
   border-radius: 12px;
   padding: 4px;
+  transform: rotate(0);
+  opacity: 0;
+  transition: all 400ms ease-out;
 }
 
 .cards {
@@ -279,6 +282,7 @@ a {
   margin: 15px;
   height: 42px;
   width: 100%;
+  transition: width 500ms ease-out;
 }
 .cards__content__title {
   font-size: 18px;
@@ -309,17 +313,15 @@ a {
   display: flex;
 }
 .menu-item:hover .confirm__btn {
-  opacity: 1;
+  width: 70px;
   transform: translate(0px);
-  transition: all 600ms ease;
 }
-.menu-item:hover .confirm__btn .fa-check {
+.menu-item:hover .fa-check {
+  opacity: 1;
   transform: rotate(-1turn);
-  transition: transform 600ms ease;
 }
 .menu-item:hover .cards__content {
   width: 74%;
-  transition: width 600ms ease;
 }
 
 .menu {

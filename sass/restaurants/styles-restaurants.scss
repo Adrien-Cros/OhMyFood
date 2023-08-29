@@ -186,11 +186,12 @@ a {
     background: $tertiary-color;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
-    opacity: 0;
     margin-left: -70px;
-    width: 70px;
+    width: 0;
     height: 69px;
     transform: translate(70px);
+
+    transition: width 500ms ease-out, transform 500ms ease-out;
 
     .fa-check {
         display: flex;
@@ -199,6 +200,10 @@ a {
         font-size: 14px;
         border-radius: 12px;
         padding: 4px;
+        transform: rotate(0);
+        opacity: 0;
+
+        transition: all 400ms ease-out;
     }
 } 
 
@@ -226,14 +231,15 @@ a {
         height: 42px;
         width: 100%;
 
+        transition: width 500ms ease-out;
+
         &__title {
             font-size: 18px;
             font-weight: 500;
             height: 21px;
             overflow: hidden;
             white-space: nowrap;
-            text-overflow: ellipsis;
-            
+            text-overflow: ellipsis;          
         }
 
         &__subtitle {
@@ -261,24 +267,19 @@ a {
 
     &:hover {
         .confirm__btn {
-        //animation: select-btn 500ms both;
-        //transition: width 600ms ease;
-        opacity: 1;
-        transform: translate(0px);
-        transition: all 600ms ease;
-
+            width: 70px;
+            transform: translate(0px);
+        }
         .fa-check {
+            opacity: 1;
             transform: rotate(-1turn);
-            transition: transform 600ms ease;
         }
-        }
-
         .cards__content {
             width: 74%;
-            transition: width 600ms ease;
         }
     }
 }
+
 .menu {
     display: grid;
     gap: 40px;
