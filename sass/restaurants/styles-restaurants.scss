@@ -51,39 +51,7 @@ $grey: #353535;
     }
 }*/
 
-@keyframes select-btn-reverse {
-    100% {
-        transform: translate(1) scale(0);
-        width: 0;
-        opacity: 0.8;
-    }
-    75% {
-        transform: translate(0.75) scale(0.25);
-
-
-    }
-    50% {
-        transform: translate(0.625) scale(0.37);
-
-
-    }
-    33% {
-        transform: translate(0.5) scale(0.5);
-
-
-    }
-    25% {
-        transform: translate(0.25) scale(0.75);
-
-    }
-    0% {
-        transform: translate(0) scale(1);
-        width: 59px;
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
+@keyframes loader {
     0% {
         opacity: 1;
     }
@@ -141,15 +109,10 @@ a {
 
 .img-restaurant {
     width: 100%;
-    max-height: 275px;
+    max-height: 330px;
     z-index: -1;
     margin-bottom: -32px;
     object-fit: cover;
-
-    @media (min-width: $desktop-breakpoint) {
-        width: 100%;
-        object-fit: contain;
-    }
 }
 
 /***********Header***************/
@@ -216,12 +179,17 @@ a {
     height: 69px;
     cursor: pointer;
 
+    @media (min-width: $desktop-breakpoint) {
+        width: 634px;
+    }
+
     &__menu {
         display: flex;
         flex-direction: column;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+
     }
     &__content {
         display: flex;
@@ -275,7 +243,11 @@ a {
             transform: rotate(-1turn);
         }
         .cards__content {
-            width: 74%;
+            width: calc(100% - 100px);
+            
+            @media (min-width: $desktop-breakpoint) {
+                width: 85%;
+            }
         }
     }
 }
@@ -288,14 +260,28 @@ a {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
+    @media (min-width: $desktop-breakpoint) {
+        margin: 0 180px;
+    }
+
     &__restaurants-name {
         position: relative;
+
+        @media (min-width: $desktop-breakpoint) {
+            display: flex;
+            justify-content: center;
+
+        }
         
         .fa-heart {
             font-size: 22px;
             position: absolute;
             right: 7%;
             top: 15%;
+            @media (min-width: $desktop-breakpoint) {
+                right: 31%;
+                top: 21%;
+            }
 
             &:hover {
                 font-weight: bold;
@@ -312,8 +298,12 @@ a {
         display: flex;
         flex-direction: column;
         gap: 12px;
-    }
 
+        @media (min-width: $desktop-breakpoint) {
+        justify-self: center;
+        width: 634px;
+        }
+    }
     .border-title {
         border-top: 3px solid $tertiary-color;
         margin-top: 9px;
@@ -337,7 +327,7 @@ a {
         transition: all 300ms ease-out;
 
         &:hover {
-            @include box-shadow(15px, 0.35);
+            @include box-shadow(10px, 0.35);
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, $primary-color 0%, $secondary-color 100%);
         }
     }
