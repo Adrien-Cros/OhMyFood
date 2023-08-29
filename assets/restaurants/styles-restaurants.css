@@ -86,60 +86,67 @@
 /****** Variables ***********/
 /****** Mixin ***********/
 /****** Keyframe ***********/
-@keyframes select-btn {
-  0% {
-    transform: translateX(1) scaleX(0);
+/*@keyframes select-btn {
+    0% {
+        transform: translate(1) scale(0);
+        width: 0;
+        opacity: 0.8;
+    }
+    25% {
+        transform: translate(0.75) scale(0.25);
+
+
+    }
+    33% {
+        transform: translate(0.625) scale(0.37);
+
+
+    }
+    50% {
+        transform: translate(0.5) scale(0.5);
+
+
+    }
+    75% {
+        transform: translate(0.25) scale(0.75);
+
+    }
+    100% {
+        transform: translate(0) scale(1);
+        width: 59px;
+        opacity: 1;
+    }
+}*/
+@keyframes select-btn-reverse {
+  100% {
+    transform: translate(1) scale(0);
     width: 0;
     opacity: 0.8;
   }
-  25% {
-    transform: translateX(0.75) scaleX(0.25);
-    width: 18px;
-  }
-  33% {
-    transform: translateX(0.625) scaleX(0.37);
-    width: 38px;
+  75% {
+    transform: translate(0.75) scale(0.25);
   }
   50% {
-    transform: translateX(0.5) scaleX(0.5);
-    width: 56px;
+    transform: translate(0.625) scale(0.37);
   }
-  75% {
-    transform: translateX(0.25) scaleX(0.75);
-    width: 74px;
+  33% {
+    transform: translate(0.5) scale(0.5);
   }
-  100% {
-    transform: translateX(0) scaleX(1);
-    width: 90px;
+  25% {
+    transform: translate(0.25) scale(0.75);
+  }
+  0% {
+    transform: translate(0) scale(1);
+    width: 59px;
     opacity: 1;
   }
 }
-@keyframes select-btn-reverse {
-  100% {
-    transform: translateX(1) scaleX(0);
-    width: 0;
-    opacity: 0.8;
-  }
-  75% {
-    transform: translateX(0.75) scaleX(0.25);
-    width: 18px;
-  }
-  50% {
-    transform: translateX(0.625) scaleX(0.37);
-    width: 38px;
-  }
-  33% {
-    transform: translateX(0.5) scaleX(0.5);
-    width: 56px;
-  }
-  25% {
-    transform: translateX(0.25) scaleX(0.75);
-    width: 74px;
-  }
+@keyframes fade {
   0% {
-    transform: translateX(0) scaleX(1);
-    width: 90px;
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /****** General ***********/
@@ -158,6 +165,7 @@ body {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  opacity: 1;
 }
 
 h2 {
@@ -188,16 +196,18 @@ a {
   text-decoration: none;
 }
 
-article a {
-  display: flex;
-  color: black;
-}
-
 .img-restaurant {
-  width: 375px;
-  height: 275px;
+  width: 100%;
+  max-height: 275px;
   z-index: -1;
   margin-bottom: -32px;
+  object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .img-restaurant {
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 /***********Header***************/
@@ -224,17 +234,40 @@ article a {
 }
 
 /*******Cards general **********/
+.confirm__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  opacity: 0;
+  margin-left: -70px;
+  width: 70px;
+  height: 69px;
+  transform: translate(70px);
+}
+.confirm__btn .fa-check {
+  display: flex;
+  background: white;
+  color: #99E2D0;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 4px;
+}
+
 .cards {
   display: flex;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
+  height: 69px;
+  cursor: pointer;
 }
 .cards__menu {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -272,6 +305,23 @@ article a {
 }
 
 /****** Section menu ***********/
+.menu-item {
+  display: flex;
+}
+.menu-item:hover .confirm__btn {
+  opacity: 1;
+  transform: translate(0px);
+  transition: all 600ms ease;
+}
+.menu-item:hover .confirm__btn .fa-check {
+  transform: rotate(-1turn);
+  transition: transform 600ms ease;
+}
+.menu-item:hover .cards__content {
+  width: 74%;
+  transition: width 600ms ease;
+}
+
 .menu {
   display: grid;
   gap: 40px;
@@ -299,42 +349,6 @@ article a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.menu__starter a, .menu__main-course a, .menu__dessert a {
-  width: 349px;
-  height: 69px;
-}
-.menu__starter a .select__button, .menu__main-course a .select__button, .menu__dessert a .select__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #99E2D0;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  width: 0;
-  opacity: 0;
-  transform: translateX(1) scaleX(1);
-}
-.menu__starter a .select__button .fa-check, .menu__main-course a .select__button .fa-check, .menu__dessert a .select__button .fa-check {
-  opacity: 0;
-  display: flex;
-  background: white;
-  color: #99E2D0;
-  font-size: 14px;
-  border-radius: 12px;
-  padding: 4px;
-}
-.menu__starter a:hover .select__button, .menu__main-course a:hover .select__button, .menu__dessert a:hover .select__button {
-  animation: select-btn 300ms both ease-out;
-}
-.menu__starter a:hover .fa-check, .menu__main-course a:hover .fa-check, .menu__dessert a:hover .fa-check {
-  opacity: 1;
-}
-.menu__starter a:hover .cards__menu, .menu__main-course a:hover .cards__menu, .menu__dessert a:hover .cards__menu {
-  width: 228.3px;
-}
-.menu__starter a:not(:hover) .select__button, .menu__main-course a:not(:hover) .select__button, .menu__dessert a:not(:hover) .select__button {
-  animation: select-btn-reverse 300ms both ease-out;
 }
 .menu .border-title {
   border-top: 3px solid #99E2D0;
