@@ -19,37 +19,17 @@ $grey: #353535;
 }
 
 /****** Keyframe ***********/
-/*@keyframes select-btn {
+@keyframes menu-apparition {
     0% {
-        transform: translate(1) scale(0);
-        width: 0;
-        opacity: 0.8;
+        opacity: 0;
+        transform: translateY(-50px) scale(0.7);
     }
-    25% {
-        transform: translate(0.75) scale(0.25);
 
-
-    }
-    33% {
-        transform: translate(0.625) scale(0.37);
-
-
-    }
-    50% {
-        transform: translate(0.5) scale(0.5);
-
-
-    }
-    75% {
-        transform: translate(0.25) scale(0.75);
-
-    }
     100% {
-        transform: translate(0) scale(1);
-        width: 59px;
         opacity: 1;
+        transform: translateY(0) scale(1);
     }
-}*/
+}
 
 @keyframes loader {
     0% {
@@ -230,6 +210,30 @@ a {
 }
 
 /****** Section menu ***********/
+//ANIMATION MENU
+.apparition-name,
+.apparition-1,
+.apparition-2,
+.apparition-3 {
+    opacity: 0;
+}
+
+.apparition-name {
+    animation: menu-apparition 1s ease-out 200ms forwards ;
+}
+
+.apparition-1 {
+    animation: menu-apparition 1s ease-in 500ms forwards ;
+}
+
+.apparition-2 {
+    animation: menu-apparition 1s ease-in 1000ms forwards ;
+}
+
+.apparition-3 {
+    animation: menu-apparition 1s ease-in 1500ms forwards ;
+}
+/////////////
 .menu-item {
     display: flex;
 
@@ -278,6 +282,8 @@ a {
             position: absolute;
             right: 7%;
             top: 15%;
+            transition: all 400ms ease;
+
             @media (min-width: $desktop-breakpoint) {
                 right: 31%;
                 top: 21%;
@@ -286,8 +292,8 @@ a {
             &:hover {
                 font-weight: bold;
                 background: $color-gradient;
-                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
             }
         }
     }
