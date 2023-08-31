@@ -96,7 +96,7 @@
   }
 }
 @keyframes animation-loader {
-  0% {
+  0%, 100% {
     transform: translateY(0) scale(1);
   }
   25% {
@@ -111,9 +111,6 @@
   75% {
     transform: translateY(0) scale(1.05);
   }
-  100% {
-    transform: translateY(0) scale(1);
-  }
 }
 /****** General ***********/
 * {
@@ -125,7 +122,6 @@
 }
 
 body {
-  max-width: 1440px;
   min-width: 350px;
   display: flex;
   justify-content: center;
@@ -155,7 +151,6 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  max-width: 1440px;
   min-width: 350px;
   width: 100%;
   height: 100%;
