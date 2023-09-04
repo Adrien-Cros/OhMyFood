@@ -22,7 +22,7 @@ $grey: #353535;
 @keyframes menu-apparition {
     0% {
         opacity: 0;
-        transform: translateY(-50px) scale(0.7);
+        transform: translateY(-70px) scale(0.5);
     }
 
     100% {
@@ -209,7 +209,7 @@ a {
 }
 
 .apparition-name {
-    animation: menu-apparition 1s ease-out 200ms forwards ;
+    animation: menu-apparition 1s ease-out 250ms forwards;
 }
 
 .apparition-1 {

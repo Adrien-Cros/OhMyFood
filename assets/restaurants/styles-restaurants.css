@@ -53,6 +53,7 @@
   width: 190px;
   height: 19px;
   font-weight: 500;
+  margin-left: 10px;
 }
 .footer__link--normal {
   width: 130px;
@@ -89,7 +90,7 @@
 @keyframes menu-apparition {
   0% {
     opacity: 0;
-    transform: translateY(-50px) scale(0.7);
+    transform: translateY(-70px) scale(0.5);
   }
   100% {
     opacity: 1;
@@ -262,7 +263,7 @@ a {
 }
 
 .apparition-name {
-  animation: menu-apparition 1s ease-out 200ms forwards;
+  animation: menu-apparition 1s ease-out 250ms forwards;
 }
 
 .apparition-1 {
