@@ -50,6 +50,16 @@ $grey: #353535;
     }
 }
 
+@keyframes animation-tuto {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 /****** General ***********/
 * {
     font-family: 'Roboto', sans-serif;
@@ -203,6 +213,19 @@ a {
 }
 
 /****** Fonctionnement ***********/
+
+.animation-btn-choose {
+    animation: animation-tuto 2s 4s both;
+}
+
+.animation-btn-menu {
+    animation: animation-tuto 2s 6s both;
+}
+
+.animation-btn-eat {
+    animation: animation-tuto 2s 8s both;
+}
+
 .functioning {
    display: flex;
    flex-direction: column;
