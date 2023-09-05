@@ -428,7 +428,7 @@ a {
   align-self: flex-end;
   width: 24px;
   height: 24px;
-  top: -38%;
+  margin-top: -31px;
   right: 7%;
 }
 .cards__content__like .fa-solid {
