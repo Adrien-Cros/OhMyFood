@@ -115,7 +115,7 @@ body {
   opacity: 1;
 }
 
-h2 {
+.menu__restaurants-name {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 28px;
@@ -256,13 +256,15 @@ a {
 
 /****** Section menu ***********/
 .apparition-name,
+.like-btn,
 .apparition-1,
 .apparition-2,
 .apparition-3 {
   opacity: 0;
 }
 
-.apparition-name {
+.apparition-name,
+.like-btn {
   animation: menu-apparition 1s ease-out 250ms forwards;
 }
 
@@ -311,33 +313,51 @@ a {
     margin: 0 180px;
   }
 }
+.menu .like-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: -32px;
+  left: 89%;
+}
+@media (min-width: 1024px) {
+  .menu .like-btn {
+    left: 73%;
+  }
+}
+.menu .like-btn .fa-solid {
+  position: absolute;
+  opacity: 0;
+  font-size: 24px;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 800ms ease;
+}
+.menu .like-btn .fa-regular {
+  position: absolute;
+  opacity: 1;
+  font-size: 24px;
+  transition: all 800ms ease;
+}
+.menu .like-btn:hover .fa-solid {
+  opacity: 1;
+}
+.menu .like-btn:hover .fa-regular {
+  opacity: 0;
+}
 .menu__restaurants-name {
   position: relative;
+  margin-bottom: -41px;
 }
 @media (min-width: 1024px) {
   .menu__restaurants-name {
     display: flex;
     justify-content: center;
   }
-}
-.menu__restaurants-name .fa-heart {
-  font-size: 22px;
-  position: absolute;
-  right: 7%;
-  top: 15%;
-  transition: all 400ms ease;
-}
-@media (min-width: 1024px) {
-  .menu__restaurants-name .fa-heart {
-    right: 31%;
-    top: 21%;
-  }
-}
-.menu__restaurants-name .fa-heart:hover {
-  font-weight: bold;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
 }
 .menu__starter, .menu__main-course, .menu__dessert {
   display: flex;

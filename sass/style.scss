@@ -374,20 +374,41 @@ a {
         margin-left: 13px;
         position: relative;
 
-        &__icon {
-            position: absolute;
-            right: 5%;
-            top: 37%;
-            width: 22px;
-            height: 21px;
-            font-size: 22px;
-            transition: all 250ms ease;
+        &__like {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+            width: 24px;
+            height: 24px;
+            top: -38%;
+            right: 7%;
 
-            &:hover {
-                font-weight: bold;
+            .fa-solid {
+                position: absolute;
+                opacity: 0;
+                font-size: 24px;
                 background: $color-gradient;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                transition: all 800ms ease;
+            }
+            .fa-regular {
+                position: absolute;
+                opacity: 1;
+                font-size: 24px;
+                transition: all 800ms ease;
+            }
+
+            &:hover {
+                .fa-solid {
+                    opacity: 1;
+                }
+
+                .fa-regular {
+                    opacity: 0;
+                }
             }
         }
 

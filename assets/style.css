@@ -420,20 +420,37 @@ a {
   margin-left: 13px;
   position: relative;
 }
-.cards__content__icon {
-  position: absolute;
-  right: 5%;
-  top: 37%;
-  width: 22px;
-  height: 21px;
-  font-size: 22px;
-  transition: all 250ms ease;
+.cards__content__like {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 24px;
+  height: 24px;
+  top: -38%;
+  right: 7%;
 }
-.cards__content__icon:hover {
-  font-weight: bold;
+.cards__content__like .fa-solid {
+  position: absolute;
+  opacity: 0;
+  font-size: 24px;
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 800ms ease;
+}
+.cards__content__like .fa-regular {
+  position: absolute;
+  opacity: 1;
+  font-size: 24px;
+  transition: all 800ms ease;
+}
+.cards__content__like:hover .fa-solid {
+  opacity: 1;
+}
+.cards__content__like:hover .fa-regular {
+  opacity: 0;
 }
 .cards__content__title {
   display: flex;
