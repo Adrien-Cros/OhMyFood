@@ -271,7 +271,7 @@ a {
         left: 89%;
 
         @media (min-width: $desktop-breakpoint) {
-            left: 73%;
+            left: 92%;
         }
 
         .fa-solid {
@@ -347,7 +347,7 @@ a {
         transition: all 300ms ease-out;
 
         &:hover {
-            @include box-shadow(10px, 0.35);
+            @include box-shadow(10px, 0.45);
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, $primary-color 0%, $secondary-color 100%);
         }
     }

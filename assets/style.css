@@ -118,7 +118,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.04);
   }
 }
 /****** General ***********/
@@ -263,7 +263,7 @@ a {
   transition: all 300ms ease-out;
 }
 .explore__button:hover {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
 }
 
@@ -309,8 +309,8 @@ a {
 @media (min-width: 1024px) {
   .functioning__list {
     flex-direction: row;
-    justify-content: space-between;
     gap: 36.51px;
+    justify-content: center;
   }
 }
 .functioning__list__button {
@@ -428,7 +428,7 @@ a {
   align-self: flex-end;
   width: 24px;
   height: 24px;
-  margin-top: -31px;
+  margin-top: -29px;
   right: 7%;
 }
 .cards__content__like .fa-solid {

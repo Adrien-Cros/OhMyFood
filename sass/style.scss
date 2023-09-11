@@ -56,7 +56,7 @@ $grey: #353535;
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.04);
     }
 }
 
@@ -206,7 +206,7 @@ a {
         transition: all 300ms ease-out;
 
         &:hover {
-            @include box-shadow(10px, 0.35);
+            @include box-shadow(10px, 0.45);
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, $primary-color 0%, $secondary-color 100%);
         }
     }
@@ -253,8 +253,8 @@ a {
 
         @media (min-width: $desktop-breakpoint) {
             flex-direction: row;
-            justify-content: space-between;
             gap: 36.51px;
+            justify-content: center;
         }
 
         &__button {
